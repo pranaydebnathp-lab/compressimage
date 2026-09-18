@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Compressify</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="container nav-content">
+        <a href="/" class="logo">Compressify</a>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/privacy">Privacy</a>
+            <a href="/contact">Contact</a>
+            <a href="/terms">Terms</a>
+        </nav>
+    </div>
+</header>
+
+<section class="compressor-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Contact Us</h2>
+            <p>Have a question? Send us a message.</p>
+        </div>
+
+        <div class="compressor-card">
+
+            <form action="/contact" method="POST">
+
+                <label for="name">Full Name</label>
+
+                <input type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Enter your name"
+                       required
+                       style="width:100%;padding:13px;margin:8px 0 20px;border:1px solid #d9e0eb;border-radius:9px;">
+
+                <label for="email">Email Address</label>
+
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Enter your email"
+                       required
+                       style="width:100%;padding:13px;margin:8px 0 20px;border:1px solid #d9e0eb;border-radius:9px;">
+
+                <label for="subject">Subject</label>
+
+                <input type="text"
+                       id="subject"
+                       name="subject"
+                       placeholder="Enter subject"
+                       required
+                       style="width:100%;padding:13px;margin:8px 0 20px;border:1px solid #d9e0eb;border-radius:9px;">
+
+                <label for="message">Message</label>
+
+                <textarea id="message"
+                          name="message"
+                          rows="5"
+                          placeholder="Write your message"
+                          required
+                          style="width:100%;padding:13px;margin:8px 0 20px;border:1px solid #d9e0eb;border-radius:9px;resize:vertical;"></textarea>
+
+                <button type="submit"
+                        class="btn primary-btn full-btn">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <h3>Compressify</h3>
+        <p>© 2026 Compressify. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

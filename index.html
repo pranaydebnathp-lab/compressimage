@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Compressify - Image & PDF Compressor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="/" class="logo">Compressify</a>
+
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/privacy">Privacy</a>
+                <a href="/contact">Contact</a>
+                <a href="/terms">Terms</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <span class="tag">FAST • SIMPLE • EASY</span>
+
+            <h1>Compress Your Files<br>
+                <span>Without the Hassle</span>
+            </h1>
+
+            <p>
+                Reduce image and PDF file sizes quickly using
+                our simple online compression tool.
+            </p>
+
+            <a href="#compressor" class="btn primary-btn">
+                Start Compressing
+            </a>
+        </div>
+    </section>
+
+    <!-- Compressor Section -->
+    <section class="compressor-section" id="compressor">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>File Compressor</h2>
+                <p>Choose a file and upload it for compression.</p>
+            </div>
+
+            <div class="compressor-card">
+
+                <form id="compressForm">
+
+                    <label for="fileType">Select File Type</label>
+
+                    <select id="fileType" name="file_type">
+                        <option value="image">Image</option>
+                        <option value="pdf">PDF</option>
+                    </select>
+
+                    <div class="upload-box" id="uploadBox">
+
+                        <div class="upload-icon">↑</div>
+
+                        <h3>Upload Your File</h3>
+
+                        <p>
+                            JPG, PNG, WebP or PDF
+                        </p>
+
+                        <input type="file"
+                               id="fileInput"
+                               name="file"
+                               accept="image/jpeg,image/png,image/webp,application/pdf"
+                               required>
+
+                        <label for="fileInput" class="btn upload-btn">
+                            Choose File
+                        </label>
+
+                        <p id="fileName">No file selected</p>
+
+                    </div>
+
+                    <label for="quality">Compression Quality</label>
+
+                    <select id="quality" name="quality">
+                        <option value="low">Low Compression</option>
+                        <option value="medium" selected>
+                            Medium Compression
+                        </option>
+                        <option value="high">High Compression</option>
+                    </select>
+
+                    <button type="submit"
+                            class="btn primary-btn full-btn">
+                        Compress File
+                    </button>
+
+                </form>
+
+                <div id="loading" class="loading hidden">
+                    Compressing your file...
+                </div>
+
+                <div id="message" class="message"></div>
+
+                <div id="result" class="result hidden">
+                    <h3>Compression Complete!</h3>
+
+                    <p id="resultText"></p>
+
+                    <a id="downloadBtn"
+                       href="#"
+                       class="btn primary-btn"
+                       download>
+                        Download Compressed File
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>Why Use Compressify?</h2>
+            </div>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Compression</h3>
+                    <p>Compress supported files with a simple upload.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy Focused</h3>
+                    <p>We aim to handle uploaded files responsibly.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📁</div>
+                    <h3>Easy Downloads</h3>
+                    <p>Download the compressed result when processing is complete.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+
+            <h3>Compressify</h3>
+
+            <p>
+                A simple image and PDF compression website.
+            </p>
+
+            <div class="footer-links">
+                <a href="/about">About</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/contact">Contact Us</a>
+                <a href="/terms">Terms & Conditions</a>
+            </div>
+
+            <p class="copyright">
+                © 2026 Compressify. All rights reserved.
+            </p>
+
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
